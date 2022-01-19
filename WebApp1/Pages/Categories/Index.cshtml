@@ -1,0 +1,23 @@
+﻿@page
+@model WebApp1.Pages.Categories.IndexModel
+
+<div class="container"> 
+    <div class="mb-3">
+        <a asp-page="create" class="btn btn-primary">Create</a>
+    </div>   
+    <table class="table table-success table-striped">
+        <tr>
+            <th>Name</th>
+            <th >Display Order</th>
+        </tr>    
+        @foreach(var obj in Model.Categories)
+        {
+            <tr>
+                <td>@obj.Name</td>
+                <td>@obj.DisplayOrder</td>
+            </tr> 
+            
+        }
+        
+    </table>
+</div>

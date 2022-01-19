@@ -1,0 +1,20 @@
+﻿@page
+@model WebApp1.Pages.Categories.CreateModel
+
+<div class="container bg-light ">
+    <div asp-validation-summary="All">  </div>
+    <form class="p-3" method="post">
+      <div class="mb-3">
+        <label asp-for="Category.Name" class="form-label">Name</label>
+        <input asp-for="Category.Name" class="form-control" >
+        <span asp-validation-for="Category.Name" class="text-danger"></span>
+      </div>
+      <div class="mb-3">
+        <label asp-for="Category.DisplayOrder" class="form-label">Display Order</label>
+        <input asp-for="Category.DisplayOrder" type="text" class="form-control">
+        <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>
