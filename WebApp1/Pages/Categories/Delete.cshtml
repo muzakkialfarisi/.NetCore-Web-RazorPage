@@ -1,9 +1,12 @@
 ﻿@page
-@model WebApp1.Pages.Categories.CreateModel
+@model WebApp1.Pages.Categories.DeleteModel
 
 <div class="container bg-light ">
     <div asp-validation-summary="All">  </div>
     <form class="p-3" method="post">
+        @*ini biar ga duplikat*@
+        <input asp-for="Category.Id" hidden />
+        <input asp-for="Category.Id" hidden />
       <div class="mb-3">
         <label asp-for="Category.Name" class="form-label">Name</label>
         <input asp-for="Category.Name" class="form-control" >
@@ -14,9 +17,7 @@
         <input asp-for="Category.DisplayOrder" type="text" class="form-control">
         <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <a asp-page="../Index" type="button" class="btn btn-secondary">back to home</a>
-      <a asp-page="Index" type="button" class="btn btn-secondary">back to list</a>
+      <button type="submit" class="btn btn-primary">Delete</button>
     </form>
 
 </div>
